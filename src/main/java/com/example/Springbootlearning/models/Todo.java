@@ -1,16 +1,18 @@
 package com.example.Springbootlearning.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+
 import jakarta.persistence.Id;
 import lombok.Data;
 
-@Entity
 @Data
+@Document(collection = "todos")
 
 public class Todo {
     @Id
-    @GeneratedValue
+    
     
     Integer id;
     String title;
